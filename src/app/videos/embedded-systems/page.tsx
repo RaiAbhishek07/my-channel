@@ -105,41 +105,37 @@ export default function EmbeddedSystemsPage() {
                         <CardHeader>
                             <CardTitle className="text-2xl font-headline">General Block Diagram</CardTitle>
                         </CardHeader>
-                        <CardContent className="flex justify-center items-center p-6 md:py-12">
+                        <CardContent className="flex justify-center items-center p-6 md:p-12">
                             <div className="w-full max-w-3xl">
-                                <div className="relative flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+                                <div className="relative flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
                                     {/* Input */}
-                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0">
+                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0 relative">
                                         <p className="font-semibold">Input</p>
                                         <p className="text-xs text-muted-foreground">(Sensors, Switch)</p>
+                                        <ArrowRight className="hidden md:block absolute top-1/2 -right-10 transform -translate-y-1/2 text-accent"/>
+                                        <ArrowDown className="md:hidden absolute bottom-[-2.25rem] left-1/2 -translate-x-1/2 text-accent"/>
                                     </div>
 
-                                    <ArrowRight className="hidden md:block text-accent flex-shrink-0" />
-                                    <ArrowDown className="md:hidden text-accent my-4" />
-
-                                    {/* Processor */}
-                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0">
-                                        <Cpu className="mx-auto mb-1 text-accent" />
-                                        <p className="font-semibold">Processor</p>
-                                        <p className="text-xs text-muted-foreground">(Microcontroller / SoC)</p>
+                                    {/* Processor and Memory */}
+                                    <div className="flex flex-col items-center gap-4 mt-8 md:mt-0">
+                                        <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0 relative">
+                                            <Cpu className="mx-auto mb-1 text-accent" />
+                                            <p className="font-semibold">Processor</p>
+                                            <p className="text-xs text-muted-foreground">(Microcontroller / SoC)</p>
+                                            <ArrowRight className="hidden md:block absolute top-1/2 -right-10 transform -translate-y-1/2 text-accent"/>
+                                            <ArrowDown className="md:hidden absolute bottom-[-2.25rem] left-1/2 -translate-x-1/2 text-accent"/>
+                                        </div>
+                                        <ArrowUp className="text-accent" />
+                                        <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px]">
+                                            <MemoryStick className="mx-auto mb-1 text-accent" />
+                                            <p className="font-semibold">Memory</p>
+                                        </div>
                                     </div>
-                                    
-                                    <ArrowRight className="hidden md:block text-accent flex-shrink-0" />
-                                    <ArrowDown className="md:hidden text-accent my-4" />
 
                                     {/* Output */}
-                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0">
+                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0 mt-8 md:mt-0">
                                         <p className="font-semibold">Output</p>
                                         <p className="text-xs text-muted-foreground">(Motors, LEDs)</p>
-                                    </div>
-                                    
-                                    {/* Memory connected to Processor */}
-                                    <div className="md:absolute md:left-1/2 md:-translate-x-1/2 flex flex-col items-center w-full md:w-auto mt-4 md:mt-0 md:top-full">
-                                      <ArrowUp className="text-accent" />
-                                      <div className="mt-4 text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px]">
-                                          <MemoryStick className="mx-auto mb-1 text-accent" />
-                                          <p className="font-semibold">Memory</p>
-                                      </div>
                                     </div>
                                 </div>
                             </div>
