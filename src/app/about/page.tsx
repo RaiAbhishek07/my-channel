@@ -19,7 +19,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
         
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">About OmniChannel Hub</h1>
+          <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">About Abhishek Rai</h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             We are dedicated to providing high-quality, insightful content across various platforms to help you learn, grow, and succeed.
           </p>
@@ -73,9 +73,9 @@ export default function AboutPage() {
                 )}
                 <div className="md:col-span-2">
                     <h2 className="text-3xl font-headline font-bold mb-2">Meet the Creator</h2>
-                    <p className="text-lg font-medium text-primary mb-4">Alex Doe</p>
+                    <p className="text-lg font-medium text-primary mb-4">Abhishek Rai</p>
                     <p className="text-muted-foreground">
-                        Alex is a passionate content creator with over a decade of experience in digital media. With a background in marketing and technology, Alex started OmniChannel Hub to create a single point of reference for high-quality content that spans across different formats like videos, podcasts, and articles. When not creating content, Alex enjoys hiking and exploring new technologies.
+                        Abhishek is a passionate content creator with over a decade of experience in digital media. With a background in marketing and technology, Abhishek started this channel to create a single point of reference for high-quality content that spans across different formats like videos, podcasts, and articles. When not creating content, Abhishek enjoys hiking and exploring new technologies.
                     </p>
                 </div>
             </div>

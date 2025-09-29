@@ -46,7 +46,7 @@ export default function Home() {
         <div className="relative container mx-auto px-4 md:px-6 z-10">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight">
-              Welcome to OmniChannel Hub
+              Welcome to Abhishek Rai
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
               Your central source for insightful content across multiple platforms. Explore, learn, and grow with us.

@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="bg-muted/50 py-8">
       <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} OmniChannel Hub. All rights reserved.
+          © {new Date().getFullYear()} Abhishek Rai. All rights reserved.
         </p>
         <div className="flex items-center gap-4">
           <Link href="#" aria-label="Twitter">

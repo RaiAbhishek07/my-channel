@@ -18,9 +18,9 @@ export function Header() {
   return (
     <header className="bg-background/80 sticky top-0 z-50 w-full border-b backdrop-blur-sm">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2" aria-label="OmniChannel Hub Home">
+        <Link href="/" className="flex items-center gap-2" aria-label="Abhishek Rai Home">
           <Network className="h-6 w-6 text-primary" />
-          <span className="text-lg font-bold">OmniChannel Hub</span>
+          <span className="text-lg font-bold">Abhishek Rai</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
@@ -48,7 +48,7 @@ export function Header() {
               <div className="grid gap-6 p-6">
                 <Link href="/" className="flex items-center gap-2 mb-4">
                     <Network className="h-6 w-6 text-primary" />
-                    <span className="text-lg font-bold">OmniChannel Hub</span>
+                    <span className="text-lg font-bold">Abhishek Rai</span>
                 </Link>
                 <nav className="grid gap-4">
                   {navLinks.map((link) => (
