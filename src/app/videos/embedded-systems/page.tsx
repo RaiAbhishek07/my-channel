@@ -1,5 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, Cpu, MemoryStick, ToyBrick, Waypoints, Rocket, Home, Car, HeartPulse, Factory, Camera, ArrowRight, ArrowLeft, ArrowUp, ArrowDown } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 export default function EmbeddedSystemsPage() {
   return (
@@ -104,26 +106,24 @@ export default function EmbeddedSystemsPage() {
                             <CardTitle className="text-2xl font-headline">General Block Diagram</CardTitle>
                         </CardHeader>
                         <CardContent className="flex justify-center items-center p-6">
-                            <div className="w-full">
+                            <div className="w-full max-w-3xl">
                                 <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-4">
                                     {/* Input */}
-                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px]">
+                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0">
                                         <p className="font-semibold">Input</p>
                                         <p className="text-xs text-muted-foreground">(Sensors, Switch)</p>
                                     </div>
 
-                                    <ArrowRight className="hidden md:block text-accent" />
+                                    <ArrowRight className="hidden md:block text-accent flex-shrink-0" />
                                     <ArrowDown className="md:hidden text-accent" />
 
                                     {/* Processor & Memory */}
-                                    <div className="relative text-center">
+                                    <div className="relative text-center flex-shrink-0 mx-4">
                                         <div className="p-4 border rounded-lg shadow-sm bg-card min-w-[150px]">
                                             <Cpu className="mx-auto mb-1 text-accent" />
                                             <p className="font-semibold">Processor</p>
                                             <p className="text-xs text-muted-foreground">(Microcontroller / SoC)</p>
                                         </div>
-                                        <ArrowLeft className="absolute top-1/2 -left-10 -translate-y-1/2 hidden md:block text-accent" />
-                                        <ArrowRight className="absolute top-1/2 -right-10 -translate-y-1/2 hidden md:block text-accent" />
                                         <div className="md:absolute md:top-full md:left-1/2 md:-translate-x-1/2 mt-4 md:mt-12 text-center">
                                             <ArrowUp className="hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 text-accent" />
                                             <div className="p-4 border rounded-lg shadow-sm bg-card min-w-[150px]">
@@ -133,16 +133,92 @@ export default function EmbeddedSystemsPage() {
                                         </div>
                                     </div>
 
-                                    <ArrowRight className="hidden md:block text-accent md:ml-8" />
+                                    <ArrowRight className="hidden md:block text-accent flex-shrink-0" />
                                     <ArrowDown className="md:hidden text-accent mt-12" />
 
                                     {/* Output */}
-                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px]">
+                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0">
                                         <p className="font-semibold">Output</p>
                                         <p className="text-xs text-muted-foreground">(Motors, LEDs)</p>
                                     </div>
                                 </div>
                             </div>
+                        </CardContent>
+                    </Card>
+
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="text-2xl font-headline">Microcontroller vs. Microprocessor</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="overflow-x-auto">
+                                <Table>
+                                    <TableHeader>
+                                        <TableRow>
+                                            <TableHead>Feature</TableHead>
+                                            <TableHead>Microcontroller (MCU)</TableHead>
+                                            <TableHead>Microprocessor (MPU)</TableHead>
+                                        </TableRow>
+                                    </TableHeader>
+                                    <TableBody>
+                                        <TableRow>
+                                            <TableCell className="font-semibold">Core Components</TableCell>
+                                            <TableCell>CPU, Memory, I/O ports, peripherals all on a single chip.</TableCell>
+                                            <TableCell>Mainly just the CPU. Other components like memory and I/O must be added separately.</TableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <TableCell className="font-semibold">Best For</TableCell>
+                                            <TableCell>Small, dedicated tasks (e.g., washing machine, remote control, sensors).</TableCell>
+                                            <TableCell>Powerful, complex systems (e.g., smartphones, laptops, industrial control).</TableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <TableCell className="font-semibold">Commonality</TableCell>
+                                            <TableCell>Most common choice for typical embedded systems.</TableCell>
+                                            <TableCell>Used in more complex, high-performance embedded systems.</TableCell>
+                                        </TableRow>
+                                    </TableBody>
+                                </Table>
+                            </div>
+                        </CardContent>
+                    </Card>
+
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="text-2xl font-headline">Frequently Asked Questions</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                             <Accordion type="single" collapsible className="w-full">
+                                <AccordionItem value="item-1">
+                                    <AccordionTrigger>"Is an embedded system the same as a computer?"</AccordionTrigger>
+                                    <AccordionContent className="text-muted-foreground">
+                                    No. A computer (like a laptop/PC) is general-purpose and can do many tasks. An embedded system is task-specific and designed to do only one or a few jobs.
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-2">
+                                    <AccordionTrigger>"Can I install Windows or games on an embedded system?"</AccordionTrigger>
+                                    <AccordionContent className="text-muted-foreground">
+                                    Usually, no. Embedded systems run special programs called firmware, not large operating systems like Windows. Some advanced systems might run a tiny OS (like RTOS or a minimal Linux).
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-3">
+                                    <AccordionTrigger>"Why not just use a normal computer instead of embedded?"</AccordionTrigger>
+                                    <AccordionContent className="text-muted-foreground">
+                                    Because normal computers are big, expensive, and consume more power. Embedded systems are small, cheap, and efficient, which makes them perfect for appliances and other devices.
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-4">
+                                    <AccordionTrigger>"If it’s inside a washing machine, can I see it?"</AccordionTrigger>
+                                    <AccordionContent className="text-muted-foreground">
+                                    No, it’s a tiny chip hidden inside the control board. It works silently in the background without you ever seeing it.
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-5">
+                                    <AccordionTrigger>"Is Arduino or Raspberry Pi an embedded system?"</AccordionTrigger>
+                                    <AccordionContent className="text-muted-foreground">
+                                    Yes. An Arduino is a classic example of a microcontroller-based embedded system board. A Raspberry Pi is a more powerful mini-computer (based on a microprocessor) that can be used for more complex embedded system projects.
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
                         </CardContent>
                     </Card>
 
