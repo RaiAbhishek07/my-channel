@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Zap, Cpu, MemoryStick, ToyBrick, Waypoints, Rocket, Home, Car, HeartPulse, Factory, Camera } from "lucide-react";
+import { Zap, Cpu, MemoryStick, ToyBrick, Waypoints, Rocket, Home, Car, HeartPulse, Factory, Camera, ArrowRight, ArrowLeft, ArrowUp, ArrowDown } from "lucide-react";
 
 export default function EmbeddedSystemsPage() {
   return (
@@ -103,24 +103,37 @@ export default function EmbeddedSystemsPage() {
                         <CardHeader>
                             <CardTitle className="text-2xl font-headline">General Block Diagram</CardTitle>
                         </CardHeader>
-                        <CardContent>
-                            <pre className="bg-muted/30 p-4 rounded-lg text-sm text-center text-foreground font-code overflow-x-auto">
-{`
-    ┌─────────────────┐
-    │                 │
-┌───┴───┐           ┌─┴──┐
-│ Input │           │    │
-│(Sensor)├─►┌────────┴──┐ │
-└───────┘  │ Processor │ │ Output
-           │  (MCU)    ├─►(Motor)
-┌───┬───┐  └────────┬──┘ │
-│Memory │           │    │
-│(ROM/RAM)◄───┤    │
-└───────┘           └──┬─┘
-    │                 │
-    └─────────────────┘
-`}
-                            </pre>
+                        <CardContent className="flex justify-center items-center p-6">
+                            <div className="relative flex items-center justify-center w-full max-w-lg">
+                                <div className="text-center">
+                                    <div className="p-4 border rounded-lg shadow-sm bg-card">
+                                        <p className="font-semibold">Input</p>
+                                        <p className="text-xs text-muted-foreground">(Sensors, Switch)</p>
+                                    </div>
+                                </div>
+                                <ArrowRight className="mx-4 text-accent" />
+                                <div className="relative text-center">
+                                    <div className="p-4 border rounded-lg shadow-sm bg-card">
+                                        <Cpu className="mx-auto mb-1 text-accent" />
+                                        <p className="font-semibold">Processor</p>
+                                        <p className="text-xs text-muted-foreground">(Microcontroller / SoC)</p>
+                                    </div>
+                                    <ArrowUp className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 text-accent" />
+                                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-12 text-center">
+                                        <div className="p-4 border rounded-lg shadow-sm bg-card">
+                                            <MemoryStick className="mx-auto mb-1 text-accent" />
+                                            <p className="font-semibold">Memory</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ArrowRight className="mx-4 text-accent" />
+                                <div className="text-center">
+                                    <div className="p-4 border rounded-lg shadow-sm bg-card">
+                                        <p className="font-semibold">Output</p>
+                                        <p className="text-xs text-muted-foreground">(Motors, LEDs)</p>
+                                    </div>
+                                </div>
+                            </div>
                         </CardContent>
                     </Card>
 
