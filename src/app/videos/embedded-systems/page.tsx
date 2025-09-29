@@ -10,7 +10,6 @@ export default function EmbeddedSystemsPage() {
                     <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">
                         Introduction to Embedded Systems
                     </h1>
-                    <p className="text-lg text-muted-foreground">A complete, presentation-friendly overview.</p>
                 </div>
 
                 <div className="space-y-8">
