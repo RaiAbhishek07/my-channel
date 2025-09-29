@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Abhishek Rai',
-  description: 'Your central hub for omnichannel content.',
+  description: 'A personal blog and portfolio for Abhishek Rai.',
 };
 
 export default function RootLayout({

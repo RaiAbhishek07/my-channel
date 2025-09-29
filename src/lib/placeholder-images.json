@@ -1,40 +1,10 @@
 {
   "placeholderImages": [
     {
-      "id": "home-hero",
-      "description": "Abstract network of interconnected nodes, representing omnichannel communication.",
-      "imageUrl": "https://images.unsplash.com/photo-1738082956220-a1f20a8632ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMG5ldHdvcmt8ZW58MHx8fHwxNzU5MDM2MTA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract network"
-    },
-    {
-      "id": "home-video-content",
-      "description": "A person recording a video with a professional camera.",
-      "imageUrl": "https://images.unsplash.com/photo-1607968565043-36af90dde238?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx2aWRlbyUyMHJlY29yZGluZ3xlbnwwfHx8fDE3NTkxMzUxMjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "video recording"
-    },
-    {
-      "id": "home-podcasts",
-      "description": "A professional microphone in a recording studio.",
-      "imageUrl": "https://images.unsplash.com/photo-1660832458429-526d0601054f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwb2RjYXN0JTIwbWljcm9waG9uZXxlbnwwfHx8fDE3NTkwNzUwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "podcast microphone"
-    },
-    {
-      "id": "home-blog-posts",
-      "description": "A person typing on a laptop with a cup of coffee nearby.",
-      "imageUrl": "https://images.unsplash.com/photo-1563097111-9ef3f0d5c0e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGFwdG9wJTIwd3JpdGluZ3xlbnwwfHx8fDE3NTkxMDY0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "laptop writing"
-    },
-    {
-      "id": "about-creator",
-      "description": "A portrait of the creator of the channel.",
-      "imageUrl": "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTkwMzU5Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
-    },
-    {
-      "id": "about-mission",
-      "description": "A compass pointing towards a direction, symbolizing mission and vision.",
-      "imageUrl": "https://images.unsplash.com/photo-1668864840122-8bdaf2a87e77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb21wYXNzJTIwZGlyZWN0aW9ufGVufDB8fHx8MTc1OTEzNTEyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "compass direction"
+      "id": "embedded-systems-video",
+      "description": "A close-up of a microcontroller with various electronic components.",
+      "imageUrl": "https://images.unsplash.com/photo-1629824339794-2a6d7c7c2eea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbWJlZGRlZCUyMHN5c3RlbXN8ZW58MHx8fHwxNzU5MjM0MjE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "embedded systems"
     }
   ]
 }
