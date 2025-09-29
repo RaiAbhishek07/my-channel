@@ -2,6 +2,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, Cpu, MemoryStick, ToyBrick, Waypoints, Rocket, Home, Car, HeartPulse, Factory, Camera, ArrowRight, ArrowLeft, ArrowUp, ArrowDown } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Button } from "@/components/ui/button";
+
 
 export default function EmbeddedSystemsPage() {
   return (
@@ -107,35 +110,41 @@ export default function EmbeddedSystemsPage() {
                         </CardHeader>
                         <CardContent className="flex justify-center items-center p-6 md:p-12">
                             <div className="w-full max-w-3xl">
-                                <div className="relative flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
+                                <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4 relative">
                                     {/* Input */}
-                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0 relative z-10">
+                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0">
                                         <p className="font-semibold">Input</p>
                                         <p className="text-xs text-muted-foreground">(Sensors, Switch)</p>
-                                        <ArrowRight className="hidden md:block absolute top-1/2 -right-10 transform -translate-y-1/2 text-accent"/>
-                                        <ArrowDown className="md:hidden absolute bottom-[-2.25rem] left-1/2 -translate-x-1/2 text-accent"/>
                                     </div>
 
-                                    {/* Processor and Memory */}
-                                    <div className="flex flex-col items-center gap-4 mt-8 md:mt-0">
-                                        <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0 relative z-10">
-                                            <Cpu className="mx-auto mb-1 text-accent" />
-                                            <p className="font-semibold">Processor</p>
-                                            <p className="text-xs text-muted-foreground">(Microcontroller / SoC)</p>
-                                            <ArrowRight className="hidden md:block absolute top-1/2 -right-10 transform -translate-y-1/2 text-accent"/>
-                                            <ArrowDown className="md:hidden absolute bottom-[-2.25rem] left-1/2 -translate-x-1/2 text-accent"/>
-                                        </div>
-                                        <div className="relative w-full flex justify-center">
-                                           <ArrowUp className="text-accent" />
-                                           <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] absolute -bottom-24">
-                                               <MemoryStick className="mx-auto mb-1 text-accent" />
-                                               <p className="font-semibold">Memory</p>
-                                           </div>
-                                        </div>
-                                    </div>
+                                    <ArrowRight className="hidden md:block text-accent" />
+                                    <ArrowDown className="md:hidden text-accent" />
+
+                                    {/* Processor and Memory Popover */}
+                                    <Popover>
+                                        <PopoverTrigger asChild>
+                                            <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0 cursor-pointer">
+                                                <Cpu className="mx-auto mb-1 text-accent" />
+                                                <p className="font-semibold">Processor</p>
+                                                <p className="text-xs text-muted-foreground">(Microcontroller / SoC)</p>
+                                                <div className="flex justify-center items-center h-6 mt-1">
+                                                    <ArrowUp className="text-accent w-4 h-4" />
+                                                </div>
+                                            </div>
+                                        </PopoverTrigger>
+                                        <PopoverContent side="bottom" className="w-auto">
+                                            <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px]">
+                                                <MemoryStick className="mx-auto mb-1 text-accent" />
+                                                <p className="font-semibold">Memory</p>
+                                            </div>
+                                        </PopoverContent>
+                                    </Popover>
+                                    
+                                    <ArrowRight className="hidden md:block text-accent" />
+                                    <ArrowDown className="md:hidden text-accent" />
 
                                     {/* Output */}
-                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0 mt-32 md:mt-0 z-10">
+                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0">
                                         <p className="font-semibold">Output</p>
                                         <p className="text-xs text-muted-foreground">(Motors, LEDs)</p>
                                     </div>
