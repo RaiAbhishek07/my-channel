@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { placeholderImages } from "@/lib/placeholder-images";
 import { Video } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   const videos = placeholderImages.filter(p => p.id.includes('video'));
@@ -20,28 +21,30 @@ export default function Home() {
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {videos.map((video) => (
-              <Card key={video.id} className="flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-card">
-                <div className="relative h-56 w-full">
-                    <Image
-                        src={video.imageUrl}
-                        alt={video.description}
-                        fill
-                        className="object-cover"
-                        data-ai-hint={video.imageHint}
-                    />
-                </div>
-                <CardHeader className="flex-row items-center gap-4">
-                  <Video className="h-8 w-8 text-accent" />
-                  <CardTitle className="font-headline text-lg">
-                    {video.id === 'embedded-systems-video' ? 'Introduction to Embedded Systems' : video.description}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-sm">
-                    {video.id === 'embedded-systems-video' ? 'A beginner-friendly introduction to the world of embedded systems, covering the basics of microcontrollers, sensors, and real-world applications.' : ''}
-                  </p>
-                </CardContent>
-              </Card>
+              <Link href="/videos/embedded-systems" key={video.id}>
+                <Card className="flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-card h-full">
+                  <div className="relative h-56 w-full">
+                      <Image
+                          src={video.imageUrl}
+                          alt={video.description}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={video.imageHint}
+                      />
+                  </div>
+                  <CardHeader className="flex-row items-center gap-4">
+                    <Video className="h-8 w-8 text-accent" />
+                    <CardTitle className="font-headline text-lg">
+                      {video.id === 'embedded-systems-video' ? 'Introduction to Embedded Systems' : video.description}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground text-sm">
+                      {video.id === 'embedded-systems-video' ? 'A beginner-friendly introduction to the world of embedded systems, covering the basics of microcontrollers, sensors, and real-world applications.' : ''}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
