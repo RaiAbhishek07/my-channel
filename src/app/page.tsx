@@ -15,9 +15,6 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight">
               Abhishek Rai
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              Today's video on Embedded Systems is now live.
-            </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {videos.map((video) => (
