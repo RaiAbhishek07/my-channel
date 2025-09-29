@@ -5,6 +5,12 @@
       "description": "A close-up of a microcontroller with various electronic components.",
       "imageUrl": "https://images.unsplash.com/photo-1629824339794-2a6d7c7c2eea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbWJlZGRlZCUyMHN5c3RlbXN8ZW58MHx8fHwxNzU5MjM0MjE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "embedded systems"
+    },
+    {
+      "id": "electronics-board",
+      "description": "A detailed shot of a complex electronics circuit board with many components.",
+      "imageUrl": "https://images.unsplash.com/photo-1617597302482-31500ac8f71d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxlbGVjdHJvbmljcyUyMGNpcmN1aXR8ZW58MHx8fHwxNzU5MTQ0ODU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electronics circuit"
     }
   ]
 }

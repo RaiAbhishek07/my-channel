@@ -3,10 +3,13 @@ import { Zap, Cpu, MemoryStick, ToyBrick, Waypoints, Rocket, Home, Car, HeartPul
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { placeholderImages } from "@/lib/placeholder-images";
 
 
 export default function EmbeddedSystemsPage() {
+  const electronicsImage = placeholderImages.find(p => p.id === 'electronics-board');
+
   return (
     <div className="bg-background text-foreground">
         <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
@@ -16,6 +19,18 @@ export default function EmbeddedSystemsPage() {
                         Introduction to Embedded Systems
                     </h1>
                 </div>
+
+                {electronicsImage && (
+                  <div className="relative h-96 w-full rounded-lg overflow-hidden mb-12">
+                      <Image
+                          src={electronicsImage.imageUrl}
+                          alt={electronicsImage.description}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={electronicsImage.imageHint}
+                      />
+                  </div>
+                )}
 
                 <div className="space-y-8">
                     <Card>
