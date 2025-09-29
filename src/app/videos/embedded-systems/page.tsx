@@ -105,20 +105,20 @@ export default function EmbeddedSystemsPage() {
                         <CardHeader>
                             <CardTitle className="text-2xl font-headline">General Block Diagram</CardTitle>
                         </CardHeader>
-                        <CardContent className="flex justify-center items-center p-6">
+                        <CardContent className="flex justify-center items-center p-6 md:py-12">
                             <div className="w-full max-w-3xl">
-                                <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-4">
+                                <div className="flex flex-col md:flex-row items-center justify-center gap-4">
                                     {/* Input */}
                                     <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0">
                                         <p className="font-semibold">Input</p>
                                         <p className="text-xs text-muted-foreground">(Sensors, Switch)</p>
                                     </div>
 
-                                    <ArrowRight className="hidden md:block text-accent flex-shrink-0" />
-                                    <ArrowDown className="md:hidden text-accent" />
+                                    <ArrowRight className="hidden md:block text-accent flex-shrink-0 mx-4" />
+                                    <ArrowDown className="md:hidden text-accent my-4" />
 
                                     {/* Processor & Memory */}
-                                    <div className="relative text-center flex-shrink-0 mx-4">
+                                    <div className="relative text-center flex-shrink-0">
                                         <div className="p-4 border rounded-lg shadow-sm bg-card min-w-[150px]">
                                             <Cpu className="mx-auto mb-1 text-accent" />
                                             <p className="font-semibold">Processor</p>
@@ -133,8 +133,8 @@ export default function EmbeddedSystemsPage() {
                                         </div>
                                     </div>
 
-                                    <ArrowRight className="hidden md:block text-accent flex-shrink-0" />
-                                    <ArrowDown className="md:hidden text-accent mt-12" />
+                                    <ArrowRight className="hidden md:block text-accent flex-shrink-0 mx-4" />
+                                     <ArrowDown className="md:hidden text-accent mt-20 mb-4" />
 
                                     {/* Output */}
                                     <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0">
