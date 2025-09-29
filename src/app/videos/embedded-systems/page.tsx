@@ -109,7 +109,7 @@ export default function EmbeddedSystemsPage() {
                             <div className="w-full max-w-3xl">
                                 <div className="relative flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
                                     {/* Input */}
-                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0 relative">
+                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0 relative z-10">
                                         <p className="font-semibold">Input</p>
                                         <p className="text-xs text-muted-foreground">(Sensors, Switch)</p>
                                         <ArrowRight className="hidden md:block absolute top-1/2 -right-10 transform -translate-y-1/2 text-accent"/>
@@ -118,22 +118,24 @@ export default function EmbeddedSystemsPage() {
 
                                     {/* Processor and Memory */}
                                     <div className="flex flex-col items-center gap-4 mt-8 md:mt-0">
-                                        <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0 relative">
+                                        <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0 relative z-10">
                                             <Cpu className="mx-auto mb-1 text-accent" />
                                             <p className="font-semibold">Processor</p>
                                             <p className="text-xs text-muted-foreground">(Microcontroller / SoC)</p>
                                             <ArrowRight className="hidden md:block absolute top-1/2 -right-10 transform -translate-y-1/2 text-accent"/>
                                             <ArrowDown className="md:hidden absolute bottom-[-2.25rem] left-1/2 -translate-x-1/2 text-accent"/>
                                         </div>
-                                        <ArrowUp className="text-accent" />
-                                        <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px]">
-                                            <MemoryStick className="mx-auto mb-1 text-accent" />
-                                            <p className="font-semibold">Memory</p>
+                                        <div className="relative w-full flex justify-center">
+                                           <ArrowUp className="text-accent" />
+                                           <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] absolute -bottom-24">
+                                               <MemoryStick className="mx-auto mb-1 text-accent" />
+                                               <p className="font-semibold">Memory</p>
+                                           </div>
                                         </div>
                                     </div>
 
                                     {/* Output */}
-                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0 mt-8 md:mt-0">
+                                    <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px] flex-shrink-0 mt-32 md:mt-0 z-10">
                                         <p className="font-semibold">Output</p>
                                         <p className="text-xs text-muted-foreground">(Motors, LEDs)</p>
                                     </div>
