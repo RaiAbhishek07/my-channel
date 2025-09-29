@@ -104,8 +104,8 @@ export default function EmbeddedSystemsPage() {
                             <CardTitle className="text-2xl font-headline">General Block Diagram</CardTitle>
                         </CardHeader>
                         <CardContent className="flex justify-center items-center p-6">
-                            <div className="w-full overflow-x-auto">
-                                <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-4 min-w-max">
+                            <div className="w-full">
+                                <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-4">
                                     {/* Input */}
                                     <div className="text-center p-4 border rounded-lg shadow-sm bg-card min-w-[150px]">
                                         <p className="font-semibold">Input</p>
