@@ -176,27 +176,23 @@ export default function VideosPage() {
           {paginatedVideos.map((video) => (
             <Link href={video.href} key={video.id} className="block">
               <Card className="group overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary bg-card">
-                <div>
+                <CardHeader className="flex-row items-start gap-4">
+                  <Video className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
                   <div>
-                    <CardHeader className="flex-row items-start gap-4">
-                      <Video className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
-                      <div>
-                        <CardTitle className="font-headline text-xl mb-1">
-                          {video.title}
-                        </CardTitle>
-                        <p className="text-muted-foreground text-sm">
-                          {video.description}
-                        </p>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                        <div className="flex items-center justify-end text-sm font-medium text-primary">
-                            Watch Video
-                            <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
-                        </div>
-                    </CardContent>
+                    <CardTitle className="font-headline text-xl mb-1">
+                      {video.title}
+                    </CardTitle>
+                    <p className="text-muted-foreground text-sm">
+                      {video.description}
+                    </p>
                   </div>
-                </div>
+                </CardHeader>
+                <CardContent>
+                    <div className="flex items-center justify-end text-sm font-medium text-primary">
+                        Watch Video
+                        <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
+                    </div>
+                </CardContent>
               </Card>
             </Link>
           ))}
