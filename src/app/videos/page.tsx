@@ -1,6 +1,5 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { placeholderImages } from "@/lib/placeholder-images";
 import { Video, ArrowRight, Search } from "lucide-react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
@@ -55,7 +54,61 @@ export default function VideosPage() {
       href: '/videos/sensors/mq-series',
       title: 'MQ Series Gas Sensors',
       description: 'An overview of MQ series gas sensors like MQ-2, MQ-3, MQ-7, and MQ-135 for detecting various gases.',
-    }
+    },
+    {
+      id: 'soil-moisture-sensor-video',
+      href: '/videos/sensors/soil-moisture',
+      title: 'Soil Moisture Sensor',
+      description: 'Measures the moisture content of soil to enable smart irrigation and agricultural automation.',
+    },
+    {
+      id: 'rain-drop-sensor-video',
+      href: '/videos/sensors/rain-drop',
+      title: 'Rain Drop Sensor',
+      description: 'Detects rain droplets, perfect for automatic wipers and weather monitoring systems.',
+    },
+    {
+      id: 'water-level-sensor-video',
+      href: '/videos/sensors/water-level',
+      title: 'Water Level Sensor',
+      description: 'Detects the presence or height of water, ideal for tank monitoring and flood detection.',
+    },
+    {
+      id: 'ph-sensor-video',
+      href: '/videos/sensors/ph',
+      title: 'pH Sensor',
+      description: 'Measures hydrogen ion concentration, used in agriculture, aquariums, and labs.',
+    },
+    {
+      id: 'tds-sensor-video',
+      href: '/videos/sensors/tds',
+      title: 'TDS Sensor',
+      description: 'Measures Total Dissolved Solids to determine water quality and salinity.',
+    },
+    {
+      id: 'uv-sensor-video',
+      href: '/videos/sensors/uv',
+      title: 'UV Sensor (ML8511)',
+      description: 'Outputs a voltage proportional to UV light intensity, perfect for sun exposure monitoring.',
+    },
+    {
+      id: 'sound-sensor-video',
+      href: '/videos/sensors/sound',
+      title: 'Sound Sensor (Microphone)',
+      description: 'Detects sound and provides an amplified signal for projects like clap switches.',
+    },
+    {
+      id: 'dust-sensor-video',
+      href: '/videos/sensors/dust',
+      title: 'Dust Sensor (GP2Y1010AU0F)',
+      description: 'Detects fine dust particles in the air, used in air purifiers and pollution monitors.',
+    },
+    {
+      id: 'flame-sensor-video',
+      href: '/videos/sensors/flame',
+      title: 'Flame Sensor',
+      description: 'Detects flame light in the infrared spectrum for fire detection and safety systems.',
+    },
   ];
 
   return (
