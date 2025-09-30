@@ -1,12 +1,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, Lightbulb, Bot, CircuitBoard } from "lucide-react";
-import Image from "next/image";
-import { placeholderImages } from "@/lib/placeholder-images";
 
 export default function IRObstacleSensorPage() {
-  const sensorImage = placeholderImages.find(p => p.id === 'ir-sensor-video');
-
   return (
     <div className="bg-background text-foreground">
         <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
@@ -16,18 +12,6 @@ export default function IRObstacleSensorPage() {
                         IR Obstacle Avoidance Sensor
                     </h1>
                 </div>
-
-                {sensorImage && (
-                  <div className="relative h-96 w-full rounded-lg overflow-hidden mb-12">
-                      <Image
-                          src={sensorImage.imageUrl}
-                          alt={sensorImage.description}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={sensorImage.imageHint}
-                      />
-                  </div>
-                )}
 
                 <div className="space-y-8">
                     <Card>
