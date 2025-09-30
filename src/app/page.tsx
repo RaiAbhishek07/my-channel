@@ -9,7 +9,7 @@ export default function Home() {
       <section className="flex-1 flex items-center justify-center py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight">
+            <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight animate-fade-in-up">
               Abhishek Rai
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
