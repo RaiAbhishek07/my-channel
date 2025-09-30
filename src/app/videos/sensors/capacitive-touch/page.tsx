@@ -1,0 +1,101 @@
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Hand, CircuitBoard, Power } from "lucide-react";
+import Image from "next/image";
+import { placeholderImages } from "@/lib/placeholder-images";
+
+export default function CapacitiveTouchSensorPage() {
+  const sensorImage = placeholderImages.find(p => p.id === 'touch-sensor-video');
+
+  return (
+    <div className="bg-background text-foreground">
+        <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
+            <section className="max-w-4xl mx-auto">
+                <div className="text-center mb-12">
+                    <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">
+                        Capacitive Touch Sensor (TTP223)
+                    </h1>
+                </div>
+
+                {sensorImage && (
+                  <div className="relative h-96 w-full rounded-lg overflow-hidden mb-12">
+                      <Image
+                          src={sensorImage.imageUrl}
+                          alt={sensorImage.description}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={sensorImage.imageHint}
+                      />
+                  </div>
+                )}
+
+                <div className="space-y-8">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2 text-2xl font-headline">
+                                <Hand className="text-accent" />
+                                Working Principle
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-muted-foreground space-y-4">
+                            <p>A capacitive touch sensor, like the TTP223 module, works by detecting changes in capacitance. The sensor has a conductive plate that holds a certain amount of charge. When a conductive object, like a human finger, comes close, it changes the capacitance of this plate. The sensor detects this change and outputs a signal.</p>
+                        </CardContent>
+                    </Card>
+
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2 text-2xl font-headline">
+                                <Power className="text-accent" />
+                                Key Features
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                                <li><strong>Sensing Method:</strong> Detects touch without requiring physical pressure.</li>
+                                <li><strong>Output:</strong> Provides a simple digital output (HIGH on touch, LOW otherwise).</li>
+                                <li><strong>Low Power:</strong> Consumes very little power, making it great for battery-operated devices.</li>
+                                <li><strong>Durability:</strong> No moving parts, so it's very durable.</li>
+                            </ul>
+                        </CardContent>
+                    </Card>
+
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2 text-2xl font-headline">
+                                <CircuitBoard className="text-accent" />
+                                Arduino Integration
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-muted-foreground space-y-4">
+                            <p>It's very easy to use with an Arduino:</p>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li><strong className="text-foreground">VCC:</strong> Connect to 3.3V or 5V.</li>
+                                <li><strong className="text-foreground">GND:</strong> Connect to GND.</li>
+                                <li><strong className="text-foreground">SIG (or I/O):</strong> Connect the output pin to a digital input on the Arduino.</li>
+                            </ul>
+                            <p>Read the pin with `digitalRead()` to check for a touch.</p>
+                        </CardContent>
+                    </Card>
+
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2 text-2xl font-headline">
+                                <Hand className="text-accent" />
+                                Common Applications
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                                <li><strong>Touch Buttons:</strong> Replacing mechanical buttons on appliances and electronics.</li>
+                                <li><strong>Smart Switches:</strong> For home automation lighting control.</li>
+                                <li><strong>Interactive Projects:</strong> Creating touch-sensitive surfaces for art installations or toys.</li>
+                                <li><strong>Proximity Sensing:</strong> Can be used to detect the presence of a hand without direct contact.</li>
+                            </ul>
+                        </CardContent>
+                    </Card>
+                </div>
+            </section>
+        </div>
+    </div>
+  );
+}

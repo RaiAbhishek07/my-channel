@@ -11,6 +11,30 @@
       "description": "A detailed shot of a complex electronics circuit board with many components.",
       "imageUrl": "https://images.unsplash.com/photo-1617597302482-31500ac8f71d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxlbGVjdHJvbmljcyUyMGNpcmN1aXR8ZW58MHx8fHwxNzU5MTQ0ODU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "electronics circuit"
+    },
+    {
+      "id": "ir-sensor-video",
+      "description": "Close-up of an IR obstacle avoidance sensor module for robotics.",
+      "imageUrl": "https://images.unsplash.com/photo-1557428235-0f195181b03b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8SVIlMjBzZW5zb3J8ZW58MHx8fHwxNzU5MTk0MTc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "IR sensor"
+    },
+    {
+      "id": "ldr-sensor-video",
+      "description": "An LDR sensor reacting to a light source, used in light-sensitive circuits.",
+      "imageUrl": "https://images.unsplash.com/photo-1680598810629-8ddc88c90901?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxMRFIlMjBzZW5zb3J8ZW58MHx8fHwxNzU5MTk0MTc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "LDR sensor"
+    },
+    {
+      "id": "touch-sensor-video",
+      "description": "A person's finger activating a capacitive touch sensor module.",
+      "imageUrl": "https://images.unsplash.com/photo-1729102126528-c5faced7829a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0b3VjaCUyMHNlbnNvcnxlbnwwfHx8fDE3NTkxOTQxNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "touch sensor"
+    },
+    {
+      "id": "ultrasonic-sensor-video",
+      "description": "An ultrasonic distance sensor measuring the distance to an object.",
+      "imageUrl": "https://images.unsplash.com/photo-1662776704670-ba57453dfb47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx1bHRyYXNvbmljJTIwc2Vuc29yfGVufDB8fHx8MTc1OTE5NDE3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ultrasonic sensor"
     }
   ]
 }
