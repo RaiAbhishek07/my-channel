@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, Cpu, MemoryStick, ToyBrick, Waypoints, Rocket, Home, Car, HeartPulse, Factory, Camera, ArrowRight, ArrowLeft, ArrowUp, ArrowDown } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -19,18 +20,6 @@ export default function EmbeddedSystemsPage() {
                         Introduction to Embedded Systems
                     </h1>
                 </div>
-
-                {electronicsImage && (
-                  <div className="relative h-96 w-full rounded-lg overflow-hidden mb-12">
-                      <Image
-                          src={electronicsImage.imageUrl}
-                          alt={electronicsImage.description}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={electronicsImage.imageHint}
-                      />
-                  </div>
-                )}
 
                 <div className="space-y-8">
                     <Card>
@@ -142,9 +131,6 @@ export default function EmbeddedSystemsPage() {
                                                 <Cpu className="mx-auto mb-1 text-accent" />
                                                 <p className="font-semibold">Processor</p>
                                                 <p className="text-xs text-muted-foreground">(Microcontroller / SoC)</p>
-                                                <div className="flex justify-center items-center h-6 mt-1">
-                                                    <ArrowUp className="text-accent w-4 h-4" />
-                                                </div>
                                             </div>
                                         </PopoverTrigger>
                                         <PopoverContent side="bottom" className="w-auto">
