@@ -49,6 +49,12 @@ export default function VideosPage() {
       href: '/videos/sensors/environmental',
       title: 'Environmental Sensors',
       description: 'An overview of common sensors for measuring temperature, humidity, pressure, and air quality.',
+    },
+    {
+      id: 'mq-sensors-video',
+      href: '/videos/sensors/mq-series',
+      title: 'MQ Series Gas Sensors',
+      description: 'An overview of MQ series gas sensors like MQ-2, MQ-3, MQ-7, and MQ-135 for detecting various gases.',
     }
   ];
 
