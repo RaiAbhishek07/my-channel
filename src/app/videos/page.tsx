@@ -118,6 +118,48 @@ const allVideos: Video[] = [
     title: 'Flame Sensor',
     description: 'Detects flame light in the infrared spectrum for fire detection and safety systems.',
   },
+  {
+    id: 'pir-motion-sensor-video',
+    href: '/videos/sensors/pir-motion',
+    title: 'PIR Motion Sensor',
+    description: 'Detects human movement via changes in infrared radiation, ideal for security alarms and automatic lighting.',
+  },
+  {
+    id: 'vibration-sensor-video',
+    href: '/videos/sensors/vibration',
+    title: 'Vibration Sensor (SW-420)',
+    description: 'A spring-based switch that detects vibration or shock, used in anti-theft alarms and earthquake detection.',
+  },
+  {
+    id: 'tilt-sensor-video',
+    href: '/videos/sensors/tilt',
+    title: 'Tilt Sensor',
+    description: 'Uses a mercury or ball switch to detect the orientation of an object, often used in alarm systems.',
+  },
+  {
+    id: 'accelerometer-video',
+    href: '/videos/sensors/accelerometer',
+    title: 'Accelerometer (ADXL335)',
+    description: 'Measures acceleration along the X, Y, and Z axes, essential for tilt detection and robotics.',
+  },
+  {
+    id: 'mpu-6050-video',
+    href: '/videos/sensors/mpu-6050',
+    title: 'MPU-6050 6-Axis IMU',
+    description: 'A 6-axis Inertial Measurement Unit combining an accelerometer and a gyroscope for motion tracking.',
+  },
+  {
+    id: 'mpu-9250-video',
+    href: '/videos/sensors/mpu-9250',
+    title: 'MPU-9250 9-Axis IMU',
+    description: 'A 9-axis Inertial Measurement Unit that adds a magnetometer to the accelerometer and gyroscope.',
+  },
+  {
+    id: 'compass-video',
+    href: '/videos/sensors/compass',
+    title: 'Compass (HMC5883L)',
+    description: 'A digital magnetometer that provides directional data for navigation and robotics.',
+  },
 ];
 
 const VIDEOS_PER_PAGE = 5;
