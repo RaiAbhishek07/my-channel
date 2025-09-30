@@ -10,87 +10,74 @@ export default function EnvironmentalSensorsPage() {
                     <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">
                         Environmental Sensors
                     </h1>
+                     <p className="text-lg text-muted-foreground">
+                        How does a smart thermostat know when to turn on the AC? How does a weather app get its data? The answer lies in a family of sensors that measure the invisible conditions of the world around us.
+                    </p>
                 </div>
 
                 <div className="space-y-12">
-                    <div>
-                        <h2 className="flex items-center gap-2 text-2xl font-headline font-bold mb-4">
+                    <div className="space-y-4">
+                        <h2 className="flex items-center gap-2 text-2xl font-headline font-bold">
                             <Thermometer className="text-accent" />
-                            DHT11 (Temperature & Humidity)
+                            DHT11 & DHT22 (Temperature & Humidity)
                         </h2>
-                        <div className="text-muted-foreground space-y-2">
-                            <p><strong>Working:</strong> Uses a capacitive humidity sensor and a thermistor to measure the surrounding air.</p>
-                            <p><strong>Features:</strong> Measures 20-90% relative humidity (with ±5% accuracy) and 0-50 °C temperature (with ±2 °C accuracy).</p>
-                            <p><strong>Arduino Use:</strong> Very popular with Arduino. It requires the 'DHT' library and communicates over a single digital pin.</p>
-                            <p><strong>Applications:</strong> Common in basic weather stations, greenhouse monitoring, and indoor climate control systems.</p>
-                        </div>
+                        <p className="text-muted-foreground">These are the most common beginner sensors for measuring ambient temperature and humidity. The DHT22 is a more accurate and capable version of the DHT11.</p>
+                        <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                           <li><strong>Working Principle:</strong> They use a capacitive humidity sensor and a thermistor (a resistor that changes resistance with temperature) to take readings. An internal chip converts these readings into a digital signal.</li>
+                           <li><strong>Arduino Use:</strong> Requires a special library (like the 'DHT sensor library') and communicates over a single digital pin.</li>
+                           <li><strong>Applications:</strong> Perfect for basic weather stations, greenhouse monitoring, and indoor climate control systems.</li>
+                        </ul>
                     </div>
 
-                    <div>
-                        <h2 className="flex items-center gap-2 text-2xl font-headline font-bold mb-4">
-                            <Thermometer className="text-accent" />
-                            DHT22 (AM2302)
-                        </h2>
-                        <div className="text-muted-foreground space-y-2">
-                            <p>An improved version of the DHT11, offering higher precision and a wider measurement range.</p>
-                            <ul className="list-disc list-inside">
-                                <li><strong>Temperature Range:</strong> -40 to 80 °C (±0.5 °C accuracy).</li>
-                                <li><strong>Humidity Range:</strong> 0-100% RH (±2% accuracy).</li>
-                            </ul>
-                             <p>It's a bit more expensive but recommended for more serious projects.</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h2 className="flex items-center gap-2 text-2xl font-headline font-bold mb-4">
+                    <div className="space-y-4">
+                        <h2 className="flex items-center gap-2 text-2xl font-headline font-bold">
                             <Wind className="text-accent" />
-                            BMP180 (Barometric Pressure & Temperature)
+                            BMP180 & BMP280 (Barometric Pressure & Temperature)
                         </h2>
-                        <div className="text-muted-foreground space-y-2">
-                            <p><strong>Working:</strong> Based on piezo-resistive technology to sense pressure.</p>
-                            <p><strong>Features:</strong> Measures atmospheric pressure from 300 to 1100 hPa. This data can also be used to estimate altitude.</p>
-                            <p><strong>Arduino Use:</strong> Communicates with Arduino using the I²C protocol, so it only needs two pins (SDA and SCL).</p>
-                             <p><strong>Applications:</strong> Used in altimeters, weather forecasting devices, and drones to maintain altitude.</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h2 className="flex items-center gap-2 text-2xl font-headline font-bold mb-4">
-                            <Wind className="text-accent" />
-                            BMP280
-                        </h2>
-                        <p className="text-muted-foreground">An upgrade to the BMP180, this sensor offers higher accuracy, lower noise, and can be used over both I²C and SPI. It's a pressure and temperature sensor, but does not measure humidity.</p>
+                         <p className="text-muted-foreground">These sensors are designed to measure atmospheric pressure. Because pressure changes with altitude, they can also be used as altimeters. The BMP280 is a newer, more accurate version.</p>
+                        <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                           <li><strong>Working Principle:</strong> Based on piezo-resistive technology, where a flexible diaphragm deforms with pressure changes, altering the resistance of an internal circuit.</li>
+                           <li><strong>Arduino Use:</strong> They communicate using the I²C protocol, which only requires two pins (SDA and SCL), allowing multiple I²C devices on the same bus.</li>
+                           <li><strong>Applications:</strong> Used in drones for altitude hold, in mobile devices for faster GPS lock-on, and in weather stations for forecasting.</li>
+                        </ul>
                     </div>
                     
-                    <div>
-                        <h2 className="flex items-center gap-2 text-2xl font-headline font-bold mb-4">
+                    <div className="space-y-4">
+                        <h2 className="flex items-center gap-2 text-2xl font-headline font-bold">
                             <Droplets className="text-accent" />
-                            BME280
+                            BME280 (All-in-One Environmental Sensor)
                         </h2>
-                        <p className="text-muted-foreground">This is a powerful all-in-one environmental sensor that combines a temperature sensor, humidity sensor, and a barometric pressure sensor in a single package. It's a go-to choice for compact IoT weather stations and smart home devices.</p>
+                        <p className="text-muted-foreground">This popular sensor is a powerful combination of the BMP280 with an added humidity sensor. It provides temperature, pressure, and humidity readings all from a single component.</p>
+                        <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                           <li><strong>Why it's great:</strong> It consolidates three sensors into one, making it ideal for compact IoT devices, wearables, and all-in-one weather stations.</li>
+                           <li><strong>Arduino Use:</strong> Communicates over I²C, just like the BMP series.</li>
+                        </ul>
                     </div>
                     
-                    <div>
-                        <h2 className="flex items-center gap-2 text-2xl font-headline font-bold mb-4">
+                    <div className="space-y-4">
+                        <h2 className="flex items-center gap-2 text-2xl font-headline font-bold">
                             <Mountain className="text-accent" />
                             DS18B20 (Digital Temperature Sensor)
                         </h2>
-                        <div className="text-muted-foreground space-y-2">
-                           <p><strong>Features:</strong> Often comes in a waterproof probe, making it perfect for measuring liquid temperatures. It has a wide range of -55°C to +125°C.</p>
-                           <p><strong>Arduino Use:</strong> It uses the "One-Wire" communication protocol, meaning multiple sensors can be connected to the same digital pin on an Arduino.</p>
-                           <p><strong>Applications:</strong> Monitoring the temperature of aquariums, soil, or industrial liquids.</p>
-                        </div>
+                       <p className="text-muted-foreground">This is a high-precision digital temperature sensor, often found in a waterproof probe form factor.</p>
+                       <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                           <li><strong>Working Principle:</strong> Each sensor has a unique 64-bit serial code, allowing multiple sensors to be connected to the same data line.</li>
+                           <li><strong>Arduino Use:</strong> It uses the "One-Wire" communication protocol. You can connect many DS18B20 sensors to a single digital pin on your Arduino.</li>
+                           <li><strong>Applications:</strong> Excellent for measuring the temperature of liquids, soil, or in outdoor environments where waterproofing is needed.</li>
+                        </ul>
                     </div>
                     
-                    <div>
-                        <h2 className="flex items-center gap-2 text-2xl font-headline font-bold mb-4">
+                    <div className="space-y-4">
+                        <h2 className="flex items-center gap-2 text-2xl font-headline font-bold">
                             <Sun className="text-accent" />
                             LM35 (Analog Temperature Sensor)
                         </h2>
-                        <div className="text-muted-foreground space-y-2">
-                            <p><strong>Working:</strong> A classic and simple analog sensor. Its output voltage is linearly proportional to the temperature in Celsius (10 mV per degree Celsius).</p>
-                            <p><strong>Applications:</strong> Great for basic projects where you need a quick and easy temperature reading without complex digital communication.</p>
-                        </div>
+                        <p className="text-muted-foreground">A classic, simple, and reliable analog temperature sensor.</p>
+                        <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                            <li><strong>Working Principle:</strong> It's incredibly straightforward. Its output voltage is directly and linearly proportional to the temperature in Celsius. For every degree Celsius, the output voltage increases by 10mV.</li>
+                            <li><strong>Arduino Use:</strong> Connect its output pin directly to an analog input on the Arduino and use `analogRead()` to get a value.</li>
+                            <li><strong>Applications:</strong> Great for basic projects where you need a quick and easy temperature reading without dealing with digital communication protocols.</li>
+                        </ul>
                     </div>
                 </div>
             </section>

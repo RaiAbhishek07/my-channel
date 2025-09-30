@@ -10,15 +10,25 @@ export default function PhSensorPage() {
                     <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">
                         pH Sensor
                     </h1>
+                     <p className="text-lg text-muted-foreground">
+                        How do we measure something we can't see, like the acidity of a liquid? The pH sensor gives our projects a "chemical sense," allowing them to measure the quality of water, soil, and other solutions.
+                    </p>
                 </div>
 
                 <div className="space-y-12">
                     <div>
                         <h2 className="flex items-center gap-2 text-2xl font-headline font-bold mb-4">
                             <Beaker className="text-accent" />
-                            Working Principle
+                             How It Works: The Three-Step Process
                         </h2>
-                        <p className="text-muted-foreground">A pH sensor consists of a glass electrode that measures the concentration of hydrogen ions (H+) in a solution. It generates a small voltage that is proportional to the pH of the liquid. A reference electrode provides a stable voltage to compare against. The difference in voltage between the two electrodes is then converted into a pH value (typically from 0 to 14).</p>
+                        <div className="text-muted-foreground space-y-4">
+                            <p>A typical pH sensor works by measuring a voltage difference created by hydrogen ion concentration.</p>
+                             <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
+                                <li><strong>Detection:</strong> The sensor consists of a glass probe (the measuring electrode) and a reference electrode. The tip of the glass probe is made of a special glass that is permeable to hydrogen ions (H+).</li>
+                                <li><strong>Conversion:</strong> A difference in the concentration of H+ ions between the inside of the probe and the liquid being tested creates a tiny voltage across the glass membrane. The reference electrode provides a stable, constant voltage.</li>
+                                <li><strong>Output:</strong> The sensor's electronic module amplifies the very small voltage difference between the measuring electrode and the reference electrode. This final voltage is linearly proportional to the pH of the solution. An onboard circuit converts this to a signal that a microcontroller can read.</li>
+                            </ol>
+                        </div>
                     </div>
 
                     <div>
@@ -27,11 +37,12 @@ export default function PhSensorPage() {
                             Common Applications
                         </h2>
                         <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                            <li><strong>Agriculture and Hydroponics:</strong> To monitor the pH of soil and water to ensure optimal plant growth.</li>
-                            <li><strong>Aquariums:</strong> To maintain the proper water pH for fish and other aquatic life.</li>
-                            <li><strong>Laboratories:</strong> For scientific experiments and chemical analysis.</li>
-                            <li><strong>Water Treatment Plants:</strong> To ensure the safety and quality of drinking water.</li>
+                            <li><strong>Agriculture and Hydroponics:</strong> To monitor and maintain the optimal pH of soil and nutrient solutions for healthy plant growth.</li>
+                            <li><strong>Aquariums and Aquaculture:</strong> Crucial for maintaining the proper water chemistry for the health of fish and other aquatic life.</li>
+                            <li><strong>Water Quality Monitoring:</strong> Used in water treatment plants, swimming pools, and environmental testing to ensure water is safe and balanced.</li>
+                            <li><strong>Scientific Laboratories:</strong> A fundamental tool for chemistry and biology experiments.</li>
                         </ul>
+                         <p className="mt-4 text-muted-foreground border-l-4 border-accent pl-4"><strong>Important Note:</strong> pH sensors are sensitive instruments. They must be kept clean, stored in a proper storage solution when not in use, and regularly calibrated with buffer solutions of known pH values (e.g., pH 4.0, 7.0) to ensure accurate readings.</p>
                     </div>
                 </div>
             </section>

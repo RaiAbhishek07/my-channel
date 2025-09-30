@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Zap, Cpu, MemoryStick, ToyBrick, Waypoints, Rocket, Home, Car, HeartPulse, Factory, Camera, ArrowRight, ArrowLeft, ArrowDown } from "lucide-react";
+import { Zap, Cpu, MemoryStick, ToyBrick, Waypoints, Rocket, Home, Car, HeartPulse, Factory, Camera, ArrowRight, ArrowDown } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";

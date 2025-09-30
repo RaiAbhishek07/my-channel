@@ -10,15 +10,25 @@ export default function UvSensorPage() {
                     <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">
                         UV Sensor (ML8511)
                     </h1>
+                     <p className="text-lg text-muted-foreground">
+                        The sun provides light and warmth, but it also emits invisible Ultraviolet (UV) radiation. The ML8511 sensor allows our projects to see this invisible light, enabling applications from health monitoring to scientific measurement.
+                    </p>
                 </div>
 
                 <div className="space-y-12">
                     <div>
                         <h2 className="flex items-center gap-2 text-2xl font-headline font-bold mb-4">
                             <Sun className="text-accent" />
-                            Working Principle
+                             How It Works: The Three-Step Process
                         </h2>
-                        <p className="text-muted-foreground">The ML8511 UV sensor uses a photodiode that is specifically sensitive to ultraviolet (UV-A and UV-B) light. When exposed to UV radiation, the sensor outputs an analog voltage that is linearly proportional to the UV intensity. This voltage can be read by a microcontroller's analog-to-digital converter (ADC) to determine the current UV level.</p>
+                        <div className="text-muted-foreground space-y-4">
+                            <p>The ML8511 is a specialized light sensor designed specifically for the UV spectrum.</p>
+                             <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
+                                <li><strong>Detection:</strong> The sensor uses a photodiode made from a material (Silicon on Insulator, or SOI) that is particularly sensitive to UV-A (320-400 nm) and UV-B (280-320 nm) light.</li>
+                                <li><strong>Conversion:</strong> When UV photons strike the photodiode, they generate a small electrical current. The internal circuitry of the sensor converts this current into a voltage.</li>
+                                <li><strong>Output:</strong> The sensor outputs an analog voltage that is directly and linearly proportional to the intensity of the UV light it is detecting. A higher voltage means a higher UV intensity. This voltage can be read by a microcontroller's ADC.</li>
+                            </ol>
+                        </div>
                     </div>
 
                     <div>
@@ -27,10 +37,10 @@ export default function UvSensorPage() {
                             Common Applications
                         </h2>
                         <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                            <li><strong>Sun Exposure Monitoring:</strong> Used in wearable devices to alert the user when UV levels are high and it's time to seek shade or apply sunscreen.</li>
-                            <li><strong>Weather Stations:</strong> To measure the UV Index as part of a comprehensive weather report.</li>
-                            <li><strong>Cosmetic Testers:</strong> To test the UV-blocking effectiveness of sunglasses and fabrics.</li>
-                            <li><strong>Sterilization Equipment:</strong> To monitor the output of UV lamps used for sterilization.</li>
+                            <li><strong>Wearable Health Devices:</strong> To create a "sunburn alarm" that alerts the user when they have been exposed to a certain amount of UV radiation.</li>
+                            <li><strong>DIY Weather Stations:</strong> To measure and report the current UV Index, providing a more complete weather picture.</li>
+                            <li><strong>Material Testing:</strong> To test the UV-blocking effectiveness of fabrics, sunglasses, and plastics.</li>
+                            <li><strong>Sterilization Equipment Monitoring:</strong> To verify that UV lamps used for disinfecting surfaces are outputting the correct intensity of UV light.</li>
                         </ul>
                     </div>
                 </div>
