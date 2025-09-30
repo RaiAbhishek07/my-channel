@@ -10,16 +10,9 @@ type Video = {
   href: string;
   title: string;
   description: string;
-  image?: {
-    imageUrl: string;
-    description: string;
-    imageHint: string;
-  };
 };
 
 export default function VideosPage() {
-  const allVideos = placeholderImages.filter(p => p.id.includes('video'));
-
   const videos: Video[] = [
     {
       id: 'embedded-systems-video',
@@ -50,6 +43,12 @@ export default function VideosPage() {
       href: '/videos/sensors/ultrasonic-distance',
       title: 'Ultrasonic Distance Sensor (HC-SR04)',
       description: 'Understand how ultrasonic waves measure distance with high accuracy, used in robotics and parking sensors.',
+    },
+    {
+      id: 'environmental-sensors-video',
+      href: '/videos/sensors/environmental',
+      title: 'Environmental Sensors',
+      description: 'An overview of common sensors for measuring temperature, humidity, pressure, and air quality.',
     }
   ];
 
