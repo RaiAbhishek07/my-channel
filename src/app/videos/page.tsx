@@ -21,7 +21,7 @@ type Video = {
   href: string;
   title: string;
   description: string;
-  category: 'Core Concepts' | 'Sensors' | 'Actuators & Output' | 'Communication';
+  category: 'Core Concepts' | 'Sensors' | 'Actuators & Output' | 'Communication' | 'Health & Biometrics' | 'Location & Tracking';
 };
 
 const allVideos: Video[] = [
@@ -248,6 +248,69 @@ const allVideos: Video[] = [
     title: 'Line Tracking Sensor (TCRT5000)',
     description: 'A key component for building line-following robots that can navigate a defined path.',
     category: 'Sensors',
+  },
+  {
+    id: 'pulse-sensor-video',
+    href: '/videos/sensors/pulse',
+    title: 'Pulse Sensor',
+    description: 'An optical sensor that measures your pulse by detecting blood flow.',
+    category: 'Health & Biometrics',
+  },
+  {
+    id: 'max30100-video',
+    href: '/videos/sensors/max30100',
+    title: 'MAX30100 Pulse Oximeter',
+    description: 'A pulse oximeter and heart-rate sensor using red and IR LEDs.',
+    category: 'Health & Biometrics',
+  },
+  {
+    id: 'ecg-sensor-video',
+    href: '/videos/sensors/ecg',
+    title: 'ECG Sensor (AD8232)',
+    description: 'Captures the electrical activity of the heart for ECG monitoring.',
+    category: 'Health & Biometrics',
+  },
+  {
+    id: 'ir-temp-sensor-video',
+    href: '/videos/sensors/ir-temperature',
+    title: 'IR Temperature Sensor (MLX90614)',
+    description: 'Measures temperature without making contact.',
+    category: 'Sensors',
+  },
+  {
+    id: 'emg-sensor-video',
+    href: '/videos/sensors/emg',
+    title: 'EMG Sensor',
+    description: 'Measures the electrical activity of muscles.',
+    category: 'Health & Biometrics',
+  },
+  {
+    id: 'rfid-reader-video',
+    href: '/videos/sensors/rfid-reader',
+    title: 'RFID Reader (RC522)',
+    description: 'Reads RFID tags at 13.56 MHz for access control and identification systems.',
+    category: 'Communication',
+  },
+  {
+    id: 'fingerprint-sensor-video',
+    href: '/videos/sensors/fingerprint',
+    title: 'Fingerprint Sensor (R307/AS608)',
+    description: 'Provides biometric authentication by reading fingerprints.',
+    category: 'Health & Biometrics',
+  },
+  {
+    id: 'gas-leakage-sensor-video',
+    href: '/videos/sensors/gas-leakage',
+    title: 'Gas Leakage Sensor',
+    description: 'Detects the presence of combustible gases like LPG and propane.',
+    category: 'Sensors',
+  },
+  {
+    id: 'gps-module-video',
+    href: '/videos/sensors/gps-module',
+    title: 'GPS Module (NEO-6M)',
+    description: 'Provides location data from satellites, used in tracking and navigation.',
+    category: 'Location & Tracking',
   }
 ];
 
@@ -377,3 +440,5 @@ export default function VideosPage() {
     </div>
   );
 }
+
+    
