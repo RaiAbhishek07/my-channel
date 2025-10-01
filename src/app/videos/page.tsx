@@ -160,6 +160,60 @@ const allVideos: Video[] = [
     title: 'Compass (HMC5883L)',
     description: 'A digital magnetometer that provides directional data for navigation and robotics.',
   },
+  {
+    id: 'pedometer-video',
+    href: '/videos/sensors/pedometer',
+    title: 'Pedometer / Step Counter',
+    description: 'Learn how an accelerometer can be used to count steps and track activity.',
+  },
+  {
+    id: 'shock-sensor-video',
+    href: '/videos/sensors/shock',
+    title: 'Shock Sensor',
+    description: 'Detects sudden, sharp impacts for applications like car alarms and package monitoring.',
+  },
+  {
+    id: 'ir-receiver-video',
+    href: '/videos/sensors/ir-receiver',
+    title: 'IR Receiver (TSOP1738)',
+    description: 'Learn to decode signals from any remote control for your projects.',
+  },
+  {
+    id: 'ir-transmitter-receiver-video',
+    href: '/videos/sensors/ir-transmitter-receiver',
+    title: 'IR Transmitter & Receiver Pair',
+    description: 'Create line-following robots or custom remote controls with this fundamental pair.',
+  },
+  {
+    id: 'laser-module-video',
+    href: '/videos/sensors/laser-module',
+    title: 'Laser Module Sensor',
+    description: 'Use a focused beam of light for precise detection, tripwires, and alignment tasks.',
+  },
+  {
+    id: 'color-sensor-video',
+    href: '/videos/sensors/color-sensor',
+    title: 'Color Sensor (TCS3200)',
+    description: 'Enable your projects to see in color, perfect for sorting objects or identifying materials.',
+  },
+  {
+    id: 'gesture-sensor-video',
+    href: '/videos/sensors/gesture-sensor',
+    title: 'Gesture Sensor (APDS-9960)',
+    description: 'Implement touchless controls by detecting gestures, proximity, and ambient light.',
+  },
+  {
+    id: 'camera-module-video',
+    href: '/videos/sensors/camera-module',
+    title: 'Camera Module (OV7670)',
+    description: 'Add vision to your Arduino projects to capture images and video for processing.',
+  },
+  {
+    id: 'line-tracking-video',
+    href: '/videos/sensors/line-tracking',
+    title: 'Line Tracking Sensor (TCRT5000)',
+    description: 'A key component for building line-following robots that can navigate a defined path.',
+  }
 ];
 
 const VIDEOS_PER_PAGE = 5;
